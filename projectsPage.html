@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details | Udhayan Samyvel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar details-nav">
+        <div class="nav-links">
+
+        </div>
+        <div class="nav-brand">
+            <!-- Optional branding or empty to balance -->
+        </div>
+    </nav>
+
+    <section class="case-study-container">
+
+        <!-- LEFT COLUMN (Content) -->
+        <div class="case-left">
+            <h1 id="project-title" class="case-title">Loading...</h1>
+            <div class="title-separator"></div>
+
+            <div class="case-section">
+                <!-- Spark / Idea  -->
+                <h2>Spark</h2>
+                <div id="project-spark" class="case-text">
+                    <!-- Injected via JS -->
+                </div>
+            </div>
+
+            <div class="case-section">
+                <!-- Tech Stacks -->
+                <h2>Tech Stacks</h2>
+                <div id="tech-stack" class="case-text">Loading...</div>
+            </div>
+
+            <div class="case-section">
+                <!-- Overview -->
+                <h2>Overview</h2>
+                <div id="project-overview" class="case-text">Loading...</div>
+            </div>
+
+            <div class="case-section">
+                <!-- Tech Stack Details -->
+                <h2>Tech Stack Used</h2>
+                <div id="project-tech-details" class="case-text" style="white-space: pre-line;">Loading...</div>
+            </div>
+
+            <div class="case-section">
+                <!-- My Role -->
+                <h2>My role</h2>
+                <div id="project-role" class="case-text">Loading...</div>
+            </div>
+
+            <div class="case-section">
+                <!-- Working -->
+                <h2>Working</h2>
+                <div id="project-working" class="case-text">Loading...</div>
+            </div>
+
+        </div>
+
+        <!-- RIGHT COLUMN (Carousel) -->
+        <div class="case-right">
+            <!-- Visual Stack: Image Card + Dots below -->
+            <div class="visual-stack">
+                <div class="carousel-container">
+                    <img id="carousel-image" src="" alt="Project Screenshot" class="carousel-img">
+
+                    <!-- Navigation Buttons (Overlay) -->
+                    <button id="prev-btn" class="nav-overlay-btn prev">&lt;</button>
+                    <button id="next-btn" class="nav-overlay-btn next">&gt;</button>
+                </div>
+
+                <!-- Dots outside and below -->
+                <div class="carousel-indicators" id="carousel-dots">
+                    <!-- Dots injected by JS -->
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- FOOTER/CONTACT callout -->
+    <section class="contact-callout" style="text-align: center; padding: 40px;">
+        <p>Like what you see? <a href="index.html#contact" style="color: #000; text-decoration: underline;">Let's
+                connect.</a></p>
+    </section>
+
+    <!-- COPYRIGHT -->
+    <footer style="text-align: center; padding: 20px; font-size: 14px; opacity: 0.7;">
+        &copy; Udhayan 2025
+    </footer>
+
+    <script>
+        // Project Data Configuration
+        const projectsData = {
+            "canteen": {
+                title: "Canteen Management App",
+                role: "I worked as the <strong>Frontend Developer</strong>, responsible for designing and developing the user interface using <strong>Flutter</strong>. My role included implementing features like product listing, add-to-cart functionality, payment flow, bill generation, and smooth navigation across the app.",
+                tech: "", // Empty to hide the redundant simple list
+                techDetails: `
+                    <ul class="tech-list">
+                        <li><strong>Flutter</strong> – Used to build a cross-platform mobile application with a smooth and responsive UI.</li>
+                        <li><strong>SSMS (SQL Server Management Studio)</strong> – Used for managing and storing user data, orders, and transaction details.</li>
+                        <li><strong>Twilio</strong> – Integrated for sending order confirmations and notifications via SMS.</li>
+                        <li><strong>Raspberry Pi</strong> – Used as a scanning unit to verify the generated digital bill using a camera module.</li>
+                        <li><strong>Thermal Printer</strong> – Used to print the final bill after successful scanning and verification.</li>
+                    </ul>
+                `,
+                desc: "A comprehensive mobile application designed to streamline the food ordering process in college canteens.",
+                spark: "The idea came from everyday canteen problems—long queues and manual errors. We wanted to build a <strong>smart, digital-first solution</strong> that simplifies ordering and verifying bills.",
+                overview: "The system allows users to browse menus, order, and pay digitaly. A generated <strong>digital bill</strong> is scanned by a <strong>Raspberry Pi</strong> at the counter for verification, instantly printing a receipt. This ensures faster service and reduced errors.",
+                working: "The system starts with the user accessing the mobile application developed using Flutter, where food items are displayed in an organized menu. The user selects items, adds them to the cart, and proceeds to payment. Once the payment is successfully completed, the system generates a digital bill containing the order details. This bill is shown on the user’s device and must be presented at the canteen counter. A Raspberry Pi equipped with a camera module scans the displayed bill to verify the order. After successful validation, the order is confirmed, and the final receipt is printed using a connected printer. Notifications related to the order are sent to the user through Twilio, ensuring a smooth and transparent ordering experience.",
+                images: [
+                    "canteen_assets/a.jpeg",
+                    "canteen_assets/b.jpeg",
+                    "canteen_assets/c.jpeg",
+                    "canteen_assets/d.jpeg",
+                    "canteen_assets/e.jpeg",
+                    "canteen_assets/f.jpeg",
+                    "canteen_assets/g.jpeg",
+                    "canteen_assets/h.jpeg"
+                ]
+            },
+            "bus": {
+                title: "Bus Tracking Web",
+                role: "Frontend Developer (Maps, UI/UX)",
+                tech: "",
+                techDetails: `
+                    <ul class="tech-list">
+                        <li><strong>Firebase</strong> – Used for storing and retrieving real-time bus location data.</li>
+                        <li><strong>Google Maps API & Leaflet</strong> – Integrated for displaying the live location of buses on a map interface.</li>
+                        <li><strong>HTML, CSS</strong> – Used for designing a simple and effective user interface.</li>
+                        <li><strong>WebSocket</strong> – (Implicitly used via Firebase) to ensure live data synchronization.</li>
+                    </ul>
+                `,
+                desc: "A real-time bus tracking system for university transport, allowing students to track buses without GPS hardware.",
+                spark: "The project aimed to solve the issue of waiting for buses without knowing their location or arrival time. We wanted a cost-effective solution that didn't require expensive GPS hardware for every bus.",
+                overview: "This system provides a dedicated interface for students and drivers. Drivers log in and start sharing their location using their mobile devices. Students can then track the bus in real-time on a map, view estimated arrival times (ETA), and ensure they don't miss their ride. The location data is updated in real-time using Firebase.",
+                working: "The application has two modules: Driver and Student. Drivers log in with a password and enable location sharing. This live coordinates are sent to Firebase. Students do not need to log in; they simply search for their college bus route. The app fetches the live location from Firebase and displays it on a map using Google Maps/Leaflet. To keep data fresh, location entries are deleted or overwritten after a specific time interval. The project was presented at <strong>Freshathon</strong> (our college hackathon).",
+                images: [
+                    "bustracking_assets/a.png",
+                    "bustracking_assets/b.png",
+                    "bustracking_assets/c.png",
+                    "bustracking_assets/d.png",
+                    "bustracking_assets/e.png",
+                    "bustracking_assets/f.png"
+                ]
+            },
+            "hostel": {
+                title: "Hostel Management App",
+                role: "Frontend Developer (QR Scanner, UI Design)",
+                tech: "",
+                techDetails: `
+                    <ul class="tech-list">
+                        <li><strong>Flutter</strong> – Built the cross-platform mobile application for both Wardens and Students.</li>
+                        <li><strong>Firebase</strong> – Used as the backend for authentication, database, and real-time updates.</li>
+                        <li><strong>Figma</strong> – Used for UI/UX design and prototyping.</li>
+                        <li><strong>QR_Code_Scanner</strong> – Integrated for scanning student ID cards for attendance.</li>
+                        <li><strong>JSON</strong> – Used to store and validate authorized student details (Reg Number, College Code).</li>
+                    </ul>
+                `,
+                desc: "A comprehensive app for managing hostel operations, featuring distinct logins for wardens and students.",
+                spark: "Hostel management often involves manual paperwork for leave, complaints, and attendance. We wanted to digitize this process to make it efficient and transparent.",
+                overview: "The app serves two user types: Students and Wardens. Students can post complaints, apply for leave, check attendance percentages, and vote on mess menus. Wardens can manage these requests, approve/reject leaves, conduct polls, and most importantly, mark attendance via a secure ID card QR scanner.",
+                working: "<strong>Students</strong> log in to access their dashboard where they can see stats, raise complaints, and apply for leave. <br><br><strong>Wardens</strong> have administrative control. They can view and resolve complaints, approve leave requests, and create weekly refuse polls. For attendance, the warden uses the in-app QR scanner to scan student ID cards. The system validates the scanned QR against a secure JSON file containing valid student IDs (prefixed with college code) to prevent fake scans. Wardens can also check room-wise absentee lists by clicking on specific rooms and export detailed attendance reports as PDF.",
+                images: [
+                    "hms_assets/a.jpeg",
+                    "hms_assets/b.jpeg",
+                    "hms_assets/c.jpeg",
+                    "hms_assets/d.jpeg",
+                    "hms_assets/e.jpeg",
+                    "hms_assets/f.jpeg",
+                    "hms_assets/g.jpeg",
+                    "hms_assets/h1.jpeg",
+                    "hms_assets/h2.jpeg",
+                    "hms_assets/i.jpeg",
+                    "hms_assets/j.jpeg",
+                    "hms_assets/k.jpeg"
+                ]
+            },
+            "elementrix": {
+                title: "Elementrixx (IoT)",
+                role: "Backend Developer (MQTT & Firebase)",
+                tech: "",
+                techDetails: `
+                    <ul class="tech-list">
+                        <li><strong>ESP8266 / ESP32</strong> – Microcontrollers used for processing sensor data and communicating with the cloud.</li>
+                        <li><strong>Sensors</strong> – Water Level, Flow, pH, and Turbidity sensors for monitoring water quality and quantity.</li>
+                        <li><strong>MQTT Protocol</strong> – Used for lightweight, real-time messaging between hardware and the server.</li>
+                        <li><strong>Firebase</strong> – Cloud database for data storage and retrieval.</li>
+                        <li><strong>Qwen API</strong> – Integrated for potential Machine Learning analysis of usage patterns.</li>
+                    </ul>
+                `,
+                desc: "A smart, real-time water monitoring system using IoT and cloud communication to reduce wastage and automate controls.",
+                spark: "Water wastage is a critical issue. We wanted to build a system that not only monitors usage but provides intelligence and remote control to make water management smart and efficient.",
+                overview: "Elementrixx continuously monitors water parameters like level, flow rate, and quality using various sensors. This data is transmitted in real-time via MQTT to a central broker and visualized on a dashboard. The system allows for remote automation (Motor ON/OFF), alerts for leakage, and helps in making data-driven decisions.",
+                working: "The hardware setup (Arduino/ESP32) collects data from sensors (temperature, pH, turbidity, flow). This data is published to an MQTT broker. The backend (which I worked on) handles these MQTT messages and syncs the data with Firebase. The system checks for threshold breaches to trigger alerts (e.g., overflow or leakage). Users can view live status and control devices remotely through the dashboard. The project aligns with Smart India Hackathon goals by combining hardware, IoT, and networking to solve real-world resource management problems.",
+                images: [
+                    "elementrixx_assets/a.png",
+                    "elementrixx_assets/b.png",
+                    "elementrixx_assets/c.jpg",
+                    "elementrixx_assets/d.jpg",
+                    "elementrixx_assets/e.png",
+                    "elementrixx_assets/f.png",
+                    "elementrixx_assets/g.jpeg"
+                ]
+            }
+        };
+
+        // Load content based on URL param
+        const urlParams = new URLSearchParams(window.location.search);
+        let projectId = urlParams.get('id') || 'canteen';
+
+        const data = projectsData[projectId];
+
+        if (data) {
+            document.getElementById('project-title').textContent = data.title;
+
+            // Handle Simple Stack (Sidebar)
+            const techStackEl = document.getElementById('tech-stack');
+            if (data.tech) {
+                techStackEl.innerHTML = data.tech;
+                techStackEl.parentElement.style.display = 'block';
+            } else {
+                techStackEl.parentElement.style.display = 'none';
+            }
+
+            document.getElementById('project-role').innerHTML = data.role || "Developer";
+
+            // Populate new text sections with data or fallback
+            const defaultText = "Don’t just move stuff around until it looks pretty. User interface design is hard.";
+
+            document.getElementById('project-spark').innerHTML = data.spark || defaultText;
+            document.getElementById('project-overview').innerHTML = data.overview || defaultText;
+            document.getElementById('project-working').innerHTML = data.working || defaultText;
+
+            // Populate Tech Stack Details with rich list
+            const techDetailsEl = document.getElementById('project-tech-details');
+            if (techDetailsEl) {
+                techDetailsEl.innerHTML = data.techDetails || data.tech || "";
+                if (!data.techDetails && !data.tech) {
+                    techDetailsEl.parentElement.style.display = 'none';
+                } else {
+                    techDetailsEl.parentElement.style.display = 'block';
+                }
+            }
+
+
+            // Carousel Logic
+            let currentImgIndex = 0;
+            const carouselImg = document.getElementById('carousel-image');
+            const dotsContainer = document.getElementById('carousel-dots');
+
+            // Images
+            const images = (data.images && data.images.length > 0) ? data.images : ['https://via.placeholder.com/400x750?text=No+Preview'];
+
+            // Create navigation dots
+            dotsContainer.innerHTML = '';
+            images.forEach((_, index) => {
+                const dot = document.createElement('div');
+                dot.classList.add('dot');
+                if (index === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => {
+                    currentImgIndex = index;
+                    updateImage();
+                    resetTimer(); // Reset auto-play on manual interaction
+                });
+                dotsContainer.appendChild(dot);
+            });
+
+            function updateImage() {
+                carouselImg.src = images[currentImgIndex];
+
+                // Update dots
+                const dots = document.querySelectorAll('.dot');
+                dots.forEach((dot, idx) => {
+                    if (idx === currentImgIndex) dot.classList.add('active');
+                    else dot.classList.remove('active');
+                });
+            }
+
+            // Auto Play Logic
+            let autoPlayInterval;
+
+            function startTimer() {
+                autoPlayInterval = setInterval(() => {
+                    currentImgIndex = (currentImgIndex + 1) % images.length;
+                    updateImage();
+                }, 3000); // Change every 3 seconds
+            }
+
+            function resetTimer() {
+                clearInterval(autoPlayInterval);
+                startTimer();
+            }
+
+            // Initial load & start
+            updateImage();
+            startTimer();
+
+            // Add Event Listeners for new buttons
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+
+            if (prevBtn && nextBtn) {
+                prevBtn.addEventListener('click', (e) => {
+                    e.stopPropagation(); // Prevent bubbling if needed
+                    currentImgIndex = (currentImgIndex - 1 + images.length) % images.length;
+                    updateImage();
+                    resetTimer();
+                });
+
+                nextBtn.addEventListener('click', (e) => {
+                    // e.stopPropagation();
+                    currentImgIndex = (currentImgIndex + 1) % images.length;
+                    updateImage();
+                    resetTimer();
+                });
+            }
+
+        } else {
+            document.getElementById('project-title').textContent = "Project Not Found";
+        }
+    </script>
+</body>
+
+</html>
