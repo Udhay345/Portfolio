@@ -10,9 +10,31 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="splash.css">
 </head>
 
-<body>
+<body class="no-scroll">
+
+  <!-- SPLASH SCREEN -->
+  <div id="splash-screen">
+    <div class="splash-content">
+      <h1 class="splash-text">UDHAYAN</h1>
+    </div>
+  </div>
+
+  <script>
+    // Splash Screen Logic
+    window.addEventListener('load', () => {
+      const splash = document.getElementById('splash-screen');
+      const body = document.body;
+
+      // Keep splash for at least 2 seconds (or until load if longer)
+      setTimeout(() => {
+        splash.classList.add('hidden');
+        body.classList.remove('no-scroll');
+      }, 2000); // 2000ms = 2 seconds
+    });
+  </script>
 
   <!-- NAVBAR -->
   <nav class="navbar">
@@ -348,18 +370,19 @@
           <label for="message">Message</label>
           <textarea id="message" rows="5" placeholder="Tell me about your project"></textarea>
         </div>
-        <button type="submit" class="btn-submit"onclick= "change()">Send Message</button>
+        <button type="submit" class="btn-submit" onclick="change()">Send Message</button>
       </form>
     </div>
-<script>
-  function change (){
-window.location.href= "mailto:pjudhayan2007@gmail.com";
-  }
-</script>
+    <script>
+      function change() {
+        window.location.href = "mailto:pjudhayan2007@gmail.com";
+      }
+    </script>
   </div>
-   <footer style="text-align: center; padding: 20px; font-size: 14px; opacity: 0.7; text-align: center;padding-right: 30px; padding-top: 100px">
-        &copy; Udhayan 2025
-    </footer>
+  <footer
+    style="text-align: center; padding: 20px; font-size: 14px; opacity: 0.7; text-align: center;padding-right: 30px; padding-top: 100px">
+    &copy; Udhayan 2025
+  </footer>
 </section>
 
 <!-- COPYRIGHT -->
