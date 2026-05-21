@@ -52,5 +52,3 @@ The portfolio is built using modern web technologies:
 https://portfolio-bice-kappa-1ikad9ojp6.vercel.app/
 
 ---
-
-⭐ If you like this portfolio, feel free to fork the repository and give it a star!
