@@ -192,22 +192,22 @@
                 ]
             },
             "elementrix": {
-                title: "Elementrixx (IoT)",
-                role: "Backend Developer (MQTT & Firebase)",
+                title: "Elementrixx (SIH IoT Project)",
+                role: "Backend & IoT Developer",
                 tech: "",
                 techDetails: `
                     <ul class="tech-list">
-                        <li><strong>ESP8266 / ESP32</strong> – Microcontrollers used for processing sensor data and communicating with the cloud.</li>
-                        <li><strong>Sensors</strong> – Water Level, Flow, pH, and Turbidity sensors for monitoring water quality and quantity.</li>
-                        <li><strong>MQTT Protocol</strong> – Used for lightweight, real-time messaging between hardware and the server.</li>
-                        <li><strong>Firebase</strong> – Cloud database for data storage and retrieval.</li>
-                        <li><strong>Qwen API</strong> – Integrated for potential Machine Learning analysis of usage patterns.</li>
+                        <li><strong>ESP32</strong> – The main microcontroller used. Sensors are packed together and set on the water to collect data.</li>
+                        <li><strong>MQTT Protocol</strong> – Used to send data "lively" (real-time) from the sensors to the backend.</li>
+                        <li><strong>Firebase</strong> – Stores the data. It is configured to delete data after a certain interval to allocate space for new data.</li>
+                        <li><strong>SMS Alert System</strong> – Sends SMS to locals in their native languages if contamination increases.</li>
+                        <li><strong>Dashboard</strong> – A web interface for government officials to monitor contamination levels.</li>
                     </ul>
                 `,
-                desc: "A smart, real-time water monitoring system using IoT and cloud communication to reduce wastage and automate controls.",
-                spark: "Water wastage is a critical issue. We wanted to build a system that not only monitors usage but provides intelligence and remote control to make water management smart and efficient.",
-                overview: "Elementrixx continuously monitors water parameters like level, flow rate, and quality using various sensors. This data is transmitted in real-time via MQTT to a central broker and visualized on a dashboard. The system allows for remote automation (Motor ON/OFF), alerts for leakage, and helps in making data-driven decisions.",
-                working: "The hardware setup (Arduino/ESP32) collects data from sensors (temperature, pH, turbidity, flow). This data is published to an MQTT broker. The backend (which I worked on) handles these MQTT messages and syncs the data with Firebase. The system checks for threshold breaches to trigger alerts (e.g., overflow or leakage). Users can view live status and control devices remotely through the dashboard. The project aligns with Smart India Hackathon goals by combining hardware, IoT, and networking to solve real-world resource management problems.",
+                desc: "A Smart India Hackathon layout project for detecting water contamination and preventing water-borne diseases.",
+                spark: "Water-borne diseases are a major issue in North East India, causing many deaths. We wanted to solve this by expecting contamination at 'level zero' and stopping the supply immediately.",
+                overview: "This SIH project detects the amount of contamination in water using various parameters. The sensors are packed together and float on the water, sending live data to MQTT, which is then stored in Firebase. The system allows government officials to monitor the water quality via a dashboard.",
+                working: "The sensors (managed by ESP32) are set on the water and send data lively via MQTT. This data is stored in Firebase (which deletes old data periodically for new space). The data appears on a dashboard for government officials. If the contamination level increases, the system sends an SMS to all locals in their native languages. This allows authorities to stop the contaminated water at the source ('level zero' itself) and cut the water supply to other levels, preventing disease spread.",
                 images: [
                     "elementrixx_assets/a.png",
                     "elementrixx_assets/b.png",
