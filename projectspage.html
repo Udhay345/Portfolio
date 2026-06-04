@@ -100,7 +100,7 @@
 
     <!-- COPYRIGHT -->
     <footer style="text-align: center; padding: 20px; font-size: 14px; opacity: 0.7;">
-        &copy; Udhayan 2025
+        &copy; Udhayan 2026
     </footer>
 
     <script>
@@ -157,6 +157,36 @@
                     "busTracking_assets/d.png",
                     "busTracking_assets/e.png",
                     "busTracking_assets/f.png"
+                ]
+            },
+            "ppe": {
+                title: "PPE Detection for Real-Time Safety Monitoring",
+                role: "I worked as the <strong>ML Engineer</strong>, responsible for training and optimizing the YOLO object detection model, integrating OpenCV for video stream processing, and deploying the real-time violation detection pipeline.",
+                tech: "",
+                techDetails: `
+                    <ul class="tech-list">
+                        <li><strong>YOLO (You Only Look Once)</strong> – Used for real-time object detection of PPE items such as helmets, vests, gloves, and masks.</li>
+                        <li><strong>Python</strong> – Core programming language for model development and deployment.</li>
+                        <li><strong>OpenCV</strong> – Used for image processing and live video stream handling.</li>
+                        <li><strong>Deep Learning</strong> – Trained and optimized object detection models for accurate PPE recognition.</li>
+                        <li><strong>Computer Vision</strong> – Implemented to analyze video frames and detect safety equipment in real time.</li>
+                    </ul>
+                `,
+                desc: "An AI-powered real-time PPE detection system that monitors workplace safety by identifying whether workers are wearing required protective equipment.",
+                spark: "Manual safety monitoring in workplaces is time-consuming and highly error-prone. We wanted to build an <strong>AI-powered solution</strong> that could automatically detect PPE violations from live video feeds — eliminating the need for constant human supervision.",
+                overview: "The system processes live video feeds from cameras and uses the <strong>YOLO object detection model</strong> to identify essential safety equipment — helmets, safety vests, gloves, and masks. When a PPE violation is detected, the system highlights the individual and flags the violation in real time, enabling continuous automated workplace safety compliance monitoring. This project <strong>secured 2nd Place at the SRM Atlantis Hackathon</strong>.",
+                working: "The system captures live video from workplace cameras and feeds each frame into the YOLO model. The model analyzes the frame and identifies whether each detected worker is wearing the required PPE items. If a violation is found — such as a missing helmet or vest — the system draws a bounding box around the person and overlays a violation alert in real time. OpenCV handles the video stream pipeline and frame-by-frame processing, while the deep learning model runs inference at high speed to ensure minimal latency. This allows facility managers to monitor safety compliance continuously without manual intervention.",
+                images: [
+                    "ppe/1.jpeg",
+                    "ppe/2.jpeg",
+                    "ppe/3.jpeg",
+                    "ppe/5.jpeg",
+                    "ppe/6.jpg",
+                    "ppe/7.jpeg",
+                    "ppe/8.jpeg",
+                    "ppe/9.jpeg",
+                    "ppe/10.jpeg",
+                    "ppe/11.jpeg",
                 ]
             },
             "hostel": {
