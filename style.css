@@ -1842,7 +1842,7 @@ body {
 }
 
 /* Optional hover interaction on visuals */
-.landing-visuals:hover .card-1 {  
+.landing-visuals:hover .card-1 {
   transform: translate(-40px, 70px);
 }
 
@@ -2604,4 +2604,670 @@ body {
   display: flex;
   align-items: center;
   gap: 6px;
+}
+
+/* =========================================
+   SKILLS — NEW CHIP DESIGN
+   ========================================= */
+
+.skills-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.skills-eyebrow {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #aaa;
+  margin-bottom: 12px;
+}
+
+.skills-title {
+  font-family: var(--font-sans);
+  font-size: 48px;
+  font-weight: 700;
+  color: #000;
+  letter-spacing: -1px;
+}
+
+.skill-chips {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.skill-chip {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #fafafa;
+  border: 1px solid #efefef;
+  border-radius: 14px;
+  padding: 12px 16px;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+.skill-chip.chip-visible {
+  opacity: 1;
+  transform: translateY(0);
+  animation: chipIn 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes chipIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.skill-chip:hover {
+  border-color: #d0d0d0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  transform: translateX(4px);
+}
+
+.chip-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+  letter-spacing: 0.5px;
+}
+
+/* Icon colors per tech */
+.chip-python {
+  background: linear-gradient(135deg, #3776AB, #FFD43B);
+}
+
+.chip-java {
+  background: linear-gradient(135deg, #E76F00, #5382A1);
+}
+
+.chip-c {
+  background: linear-gradient(135deg, #5C8DBC, #283593);
+}
+
+.chip-dart {
+  background: linear-gradient(135deg, #0175C2, #00B4AB);
+}
+
+.chip-flutter {
+  background: linear-gradient(135deg, #54C5F8, #01579B);
+}
+
+.chip-html {
+  background: linear-gradient(135deg, #E44D26, #F16529);
+}
+
+.chip-js {
+  background: linear-gradient(135deg, #F7DF1E, #c8b400);
+  color: #333;
+}
+
+.chip-react {
+  background: linear-gradient(135deg, #61DAFB, #20232A);
+}
+
+.chip-mysql {
+  background: linear-gradient(135deg, #005C84, #F29111);
+}
+
+.chip-firebase {
+  background: linear-gradient(135deg, #FFCA28, #FF6F00);
+  color: #333;
+}
+
+.chip-mongo {
+  background: linear-gradient(135deg, #4DB33D, #1A6A00);
+}
+
+.chip-mqtt {
+  background: linear-gradient(135deg, #6750A4, #3700B3);
+}
+
+.chip-figma {
+  background: linear-gradient(135deg, #F24E1E, #A259FF);
+}
+
+.chip-ps {
+  background: linear-gradient(135deg, #001E36, #31A8FF);
+}
+
+.chip-pbi {
+  background: linear-gradient(135deg, #F2C811, #E66000);
+  color: #333;
+}
+
+.chip-yolo {
+  background: linear-gradient(135deg, #00C58E, #009A71);
+}
+
+.chip-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.chip-name {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.chip-bar {
+  height: 4px;
+  background: #ebebeb;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.chip-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #111, #555);
+  border-radius: 4px;
+  transition: width 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* =========================================
+   PROJECTS GRID — ENHANCED CARDS
+   ========================================= */
+
+.pg-header {
+  text-align: center;
+  margin-bottom: 70px;
+  padding-top: 20px;
+}
+
+.pg-eyebrow {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #aaa;
+  margin-bottom: 14px;
+}
+
+.pg-subtitle {
+  font-size: 18px;
+  color: #666;
+  max-width: 560px;
+  margin: 20px auto 0;
+  line-height: 1.6;
+}
+
+/* Overlay on cards */
+.grid-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  border-radius: 0;
+}
+
+.project-grid-card:hover .grid-overlay {
+  opacity: 1;
+}
+
+.overlay-cta {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border: 1.5px solid rgba(255, 255, 255, 0.7);
+  padding: 10px 22px;
+  border-radius: 30px;
+  transform: translateY(6px);
+  transition: transform 0.35s ease;
+}
+
+.project-grid-card:hover .overlay-cta {
+  transform: translateY(0);
+}
+
+/* Award badge on card image */
+.award-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 20px;
+  letter-spacing: 0.3px;
+  z-index: 5;
+}
+
+/* Card metadata row */
+.grid-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.grid-badge {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.badge-mobile {
+  background: #EDE7F6;
+  color: #512DA8;
+}
+
+.badge-web {
+  background: #E3F2FD;
+  color: #1565C0;
+}
+
+.badge-ai {
+  background: #E8F5E9;
+  color: #1B5E20;
+}
+
+.badge-iot {
+  background: #FFF3E0;
+  color: #E65100;
+}
+
+.grid-year {
+  font-size: 12px;
+  color: #bbb;
+  font-weight: 500;
+}
+
+/* Project description in card */
+.grid-desc {
+  font-size: 13.5px;
+  color: #666;
+  line-height: 1.55;
+  margin-bottom: 18px;
+  /* Override previous style that converted to tag */
+  background: transparent !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  width: auto !important;
+  font-weight: 400 !important;
+  margin-top: 0 !important;
+}
+
+/* Tech tags inside card */
+.grid-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: auto;
+}
+
+.gtag {
+  font-size: 11px;
+  font-weight: 600;
+  color: #555;
+  background: #f3f3f3;
+  border: 1px solid #e8e8e8;
+  padding: 3px 10px;
+  border-radius: 12px;
+  letter-spacing: 0.2px;
+  transition: all 0.25s;
+}
+
+.project-grid-card:hover .gtag {
+  background: #f0f0f0;
+  border-color: #ccc;
+}
+
+/* =========================================
+   PROJECT DETAIL — CONTACT CALLOUT
+   ========================================= */
+
+.project-contact-callout {
+  text-align: center;
+  padding: 80px 40px;
+  background: #fafafa;
+  border-top: 1px solid #efefef;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.project-contact-callout p {
+  font-size: 28px;
+  font-weight: 600;
+  color: #111;
+  margin: 0;
+}
+
+.callout-link {
+  display: inline-block;
+  padding: 14px 40px;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.callout-link:hover {
+  background: #333;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.callout-back {
+  font-size: 14px;
+  color: #aaa;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.callout-back:hover {
+  color: #555;
+}
+
+/* =========================================
+   MOBILE: skill chips responsive
+   ========================================= */
+
+@media (max-width: 900px) {
+  .skills-title {
+    font-size: 32px;
+  }
+
+  .skill-chip {
+    padding: 10px 12px;
+    gap: 10px;
+  }
+
+  .chip-icon {
+    width: 34px;
+    height: 34px;
+    font-size: 10px;
+  }
+
+  .chip-name {
+    font-size: 13px;
+  }
+
+  .pg-subtitle {
+    font-size: 16px;
+    padding: 0 20px;
+  }
+
+  .grid-desc {
+    font-size: 13px;
+  }
+
+  .award-badge {
+    font-size: 10px;
+    padding: 4px 10px;
+  }
+
+  .project-contact-callout p {
+    font-size: 22px;
+  }
+}
+
+/* =========================================
+   SKILLS — INFINITE TICKER / MARQUEE
+   ========================================= */
+
+.skills-ticker-section {
+  padding: 80px 0 60px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.skills-ticker-header {
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 0 40px;
+}
+
+.skills-subtitle {
+  font-size: 16px;
+  color: #888;
+  margin-top: 10px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* Fade edges so the ticker looks infinite */
+.ticker-track-wrapper {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.ticker-track-wrapper::before,
+.ticker-track-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.ticker-track-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, #fff 0%, transparent 100%);
+}
+
+.ticker-track-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, #fff 0%, transparent 100%);
+}
+
+.ticker-track {
+  display: flex;
+  gap: 14px;
+  width: max-content;
+  padding: 8px 0;
+}
+
+/* Row 1: scrolls left */
+.track-left {
+  animation: tickerLeft 28s linear infinite;
+}
+
+/* Row 2: scrolls right */
+.track-right {
+  animation: tickerRight 32s linear infinite;
+}
+
+@keyframes tickerLeft {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes tickerRight {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Pause on hover */
+.ticker-track-wrapper:hover .ticker-track {
+  animation-play-state: paused;
+}
+
+/* === Pills === */
+.ticker-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  border: 1.5px solid transparent;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: default;
+  user-select: none;
+}
+
+.ticker-pill:hover {
+  transform: scale(1.06);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Category colors */
+.pill-lang {
+  background: #EEF2FF;
+  color: #3730A3;
+  border-color: #C7D2FE;
+}
+
+.pill-mobile {
+  background: #EFF6FF;
+  color: #1D4ED8;
+  border-color: #BFDBFE;
+}
+
+.pill-web {
+  background: #F0F9FF;
+  color: #0369A1;
+  border-color: #BAE6FD;
+}
+
+.pill-backend {
+  background: #F0FDF4;
+  color: #166534;
+  border-color: #BBF7D0;
+}
+
+.pill-ai {
+  background: #FDF4FF;
+  color: #7E22CE;
+  border-color: #E9D5FF;
+}
+
+.pill-iot {
+  background: #FFF7ED;
+  color: #C2410C;
+  border-color: #FED7AA;
+}
+
+.pill-tool {
+  background: #FFF1F2;
+  color: #BE123C;
+  border-color: #FECDD3;
+}
+
+/* === Legend === */
+.skills-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 36px;
+  padding: 0 40px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #888;
+  letter-spacing: 0.3px;
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.dot-lang {
+  background: #3730A3;
+}
+
+.dot-mobile {
+  background: #1D4ED8;
+}
+
+.dot-backend {
+  background: #166534;
+}
+
+.dot-ai {
+  background: #7E22CE;
+}
+
+.dot-iot {
+  background: #C2410C;
+}
+
+.dot-tool {
+  background: #BE123C;
+}
+
+/* Responsive ticker */
+@media (max-width: 768px) {
+  .skills-ticker-section {
+    padding: 60px 0 40px;
+  }
+
+  .ticker-pill {
+    font-size: 13px;
+    padding: 8px 16px;
+  }
+
+  .skills-legend {
+    gap: 14px;
+  }
+
+  .legend-item {
+    font-size: 11px;
+  }
 }

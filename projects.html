@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | Udhayan Samyvel</title>
+    <meta name="description" content="All projects by Udhayan Samyvel — Flutter apps, real-time web apps, ML/AI systems, and IoT solutions.">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 </head>
 
@@ -22,70 +23,142 @@
     </nav>
 
     <section class="projects-grid-container">
-        <h1>All Projects</h1>
+        <div class="pg-header">
+            <span class="pg-eyebrow">All Work</span>
+            <h1>Projects</h1>
+            <p class="pg-subtitle">A collection of real-world builds across mobile, web, ML, and IoT — each one a problem I wanted to solve.</p>
+        </div>
 
         <div class="grid-layout">
 
             <!-- Project 1: Canteen -->
-            <a href="projectspage.html?id=canteen" class="project-grid-card">
+            <a href="projectspage.html?id=canteen" class="project-grid-card" id="card-canteen">
                 <div class="grid-thumb">
                     <img src="canteen.png" alt="Canteen Management" class="grid-img">
+                    <div class="grid-overlay">
+                        <span class="overlay-cta">View Case Study →</span>
+                    </div>
                 </div>
                 <div class="grid-info">
-                    <h3>Canteen Management</h3>
-                    <p>Flutter App <span style="font-size: 0.85em; opacity: 0.8; margin-left: 5px;">
-                        </span></p>
+                    <div class="grid-meta">
+                        <span class="grid-badge badge-mobile">Mobile App</span>
+                        <span class="grid-year">2024</span>
+                    </div>
+                    <h3>Canteen Management App</h3>
+                    <p class="grid-desc">A Flutter app that digitizes college canteen ordering — browse, pay, and verify your bill via Raspberry Pi scan, all without queues.</p>
+                    <div class="grid-tags">
+                        <span class="gtag">Flutter</span>
+                        <span class="gtag">SSMS</span>
+                        <span class="gtag">Twilio</span>
+                        <span class="gtag">Raspberry Pi</span>
+                    </div>
                 </div>
             </a>
-   <!-- Project 5: PPE Detection for Real-Time Safety Monitoring -->
-            <a href="projectspage.html?id=ppe" class="project-grid-card">
+
+            <!-- Project 2: PPE Detection -->
+            <a href="projectspage.html?id=ppe" class="project-grid-card" id="card-ppe">
                 <div class="grid-thumb">
                     <img src="ppe/1.jpeg" alt="PPE Detector" class="grid-img">
+                    <div class="grid-overlay">
+                        <span class="overlay-cta">View Case Study →</span>
+                    </div>
+                    <div class="award-badge">🏆 2nd Place · SRM Atlantis</div>
                 </div>
                 <div class="grid-info">
-                    <h3> PPE Detection for Real-Time Safety Monitoring</h3>
-                    <p> ML project  <span style="font-size: 0.85em; opacity: 0.8; margin-left: 5px;"></span></p>
+                    <div class="grid-meta">
+                        <span class="grid-badge badge-ai">AI / ML</span>
+                        <span class="grid-year">2024</span>
+                    </div>
+                    <h3>PPE Safety Monitoring System</h3>
+                    <p class="grid-desc">Real-time AI system that detects whether workers are wearing required PPE (helmet, vest, gloves) from live video feeds using YOLO.</p>
+                    <div class="grid-tags">
+                        <span class="gtag">YOLO</span>
+                        <span class="gtag">OpenCV</span>
+                        <span class="gtag">Python</span>
+                        <span class="gtag">Streamlit</span>
+                    </div>
                 </div>
             </a>
-            <!-- Project 2: Bus -->
-            <a href="projectspage.html?id=bus" class="project-grid-card">
+
+            <!-- Project 3: Bus Tracking -->
+            <a href="projectspage.html?id=bus" class="project-grid-card" id="card-bus">
                 <div class="grid-thumb">
                     <img src="bustracker.png" alt="Bus Tracking" class="grid-img">
+                    <div class="grid-overlay">
+                        <span class="overlay-cta">View Case Study →</span>
+                    </div>
+                    <div class="award-badge">🏆 Freshathon Hackathon</div>
                 </div>
                 <div class="grid-info">
-                    <h3>Bus Tracking Web</h3>
-                    <p>Real-time Web App <span style="font-size: 0.85em; opacity: 0.8; margin-left: 5px;"></span></p>
+                    <div class="grid-meta">
+                        <span class="grid-badge badge-web">Web App</span>
+                        <span class="grid-year">2024</span>
+                    </div>
+                    <h3>Bus Tracking Web App</h3>
+                    <p class="grid-desc">Live bus location tracking for university students — no GPS hardware required. Drivers share location, students see ETA in real-time.</p>
+                    <div class="grid-tags">
+                        <span class="gtag">Firebase</span>
+                        <span class="gtag">Google Maps API</span>
+                        <span class="gtag">JavaScript</span>
+                        <span class="gtag">Leaflet</span>
+                    </div>
                 </div>
             </a>
 
-            <!-- Project 3: Hostel -->
-            <a href="projectspage.html?id=hostel" class="project-grid-card">
+            <!-- Project 4: Hostel Management -->
+            <a href="projectspage.html?id=hostel" class="project-grid-card" id="card-hostel">
                 <div class="grid-thumb">
                     <img src="hms.png" alt="Hostel Management" class="grid-img">
+                    <div class="grid-overlay">
+                        <span class="overlay-cta">View Case Study →</span>
+                    </div>
                 </div>
                 <div class="grid-info">
-                    <h3>Hostel Management</h3>
-                    <p>Full Stack System <span style="font-size: 0.85em; opacity: 0.8; margin-left: 5px;"></span></p>
+                    <div class="grid-meta">
+                        <span class="grid-badge badge-mobile">Mobile App</span>
+                        <span class="grid-year">2024</span>
+                    </div>
+                    <h3>Hostel Management System</h3>
+                    <p class="grid-desc">Full-featured hostel app for students and wardens — QR-based attendance, leave requests, complaint tracking, and mess polls.</p>
+                    <div class="grid-tags">
+                        <span class="gtag">Flutter</span>
+                        <span class="gtag">Firebase</span>
+                        <span class="gtag">Figma</span>
+                        <span class="gtag">QR Scanner</span>
+                    </div>
                 </div>
             </a>
 
-            <!-- Project 4: Elementrix -->
-            <a href="projectspage.html?id=elementrix" class="project-grid-card">
+            <!-- Project 5: Elementrix (IoT) -->
+            <a href="projectspage.html?id=elementrix" class="project-grid-card" id="card-elementrix">
                 <div class="grid-thumb">
                     <img src="elementrixx_assets/a.png" alt="Elementrix IOT" class="grid-img">
+                    <div class="grid-overlay">
+                        <span class="overlay-cta">View Case Study →</span>
+                    </div>
+                    <div class="award-badge">🇮🇳 Smart India Hackathon</div>
                 </div>
                 <div class="grid-info">
-                    <h3>Elementrix (IOT)</h3>
-                    <p>Web & Design <span style="font-size: 0.85em; opacity: 0.8; margin-left: 5px;"></span></p>
+                    <div class="grid-meta">
+                        <span class="grid-badge badge-iot">IoT</span>
+                        <span class="grid-year">2024</span>
+                    </div>
+                    <h3>Elementrixx — Water Contamination IoT</h3>
+                    <p class="grid-desc">SIH project: ESP32 sensors float on water, stream contamination data via MQTT to Firebase, and alert locals in their native language via SMS.</p>
+                    <div class="grid-tags">
+                        <span class="gtag">ESP32</span>
+                        <span class="gtag">MQTT</span>
+                        <span class="gtag">Firebase</span>
+                        <span class="gtag">SMS Alert</span>
+                    </div>
                 </div>
             </a>
-          
 
         </div>
     </section>
 
     <!-- COPYRIGHT -->
-    <footer style="text-align: center; padding: 20px; font-size: 14px; opacity: 0.7;">
+    <footer style="text-align: center; padding: 40px 20px; font-size: 14px; opacity: 0.6; border-top: 1px solid #eee; margin-top: 60px;">
         &copy; Udhayan 2026
     </footer>
 
